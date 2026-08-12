@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Unbox Squishies Sources | Official IDs and Fact Checks",
   description: "Official Roblox sources, IDs, review date, media notes, and unknowns used by the independent Unbox Squishies beginner guide.",
   alternates: { canonical: "/sources" },
+  openGraph: { title: "Unbox Squishies Official Sources", description: "Official IDs, Roblox endpoints, media limits, and unpublished claims.", url: "/sources" },
 };
 
 const sourceRows = [

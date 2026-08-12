@@ -21,7 +21,7 @@ export function SiteHeader() {
       <nav className="desktop-nav" aria-label="Main navigation"><NavLinks /></nav>
       <a className="header-cta" href="/beginner-guide#step-1">Start the guide <span aria-hidden="true">→</span></a>
       <details className="mobile-nav">
-        <summary aria-label="Open navigation"><span>Menu</span><b aria-hidden="true">＋</b></summary>
+        <summary><span className="menu-open">Open menu</span><span className="menu-close">Close menu</span><b aria-hidden="true">＋</b></summary>
         <nav aria-label="Mobile navigation"><NavLinks /></nav>
       </details>
     </header>

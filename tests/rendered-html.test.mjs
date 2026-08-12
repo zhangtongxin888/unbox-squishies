@@ -41,6 +41,14 @@ test("every guide route renders and naturally links onward", async () => {
   }
 });
 
+test("deep pages publish self-referencing Open Graph URLs", async () => {
+  for (const route of expectedRoutes.slice(1)) {
+    const html = await (await render(route)).text();
+    const escapedRoute = route.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    assert.match(html, new RegExp(`<meta property="og:url" content="https://unbox-squishies\\.wiki${escapedRoute}"`), route);
+  }
+});
+
 test("internal links and fragments resolve across the guide", async () => {
   const htmlByRoute = new Map();
   for (const route of expectedRoutes) htmlByRoute.set(route, await (await render(route)).text());

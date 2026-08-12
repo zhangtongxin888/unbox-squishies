@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Unbox Squishies Progression Guide | Learn, Observe, Collect",
   description: "A no-guess progression route for Unbox Squishies using visible results instead of invented prices, upgrades, or drop rates.",
   alternates: { canonical: "/progression" },
+  openGraph: { title: "Unbox Squishies Progression Guide", description: "Learn, observe, and collect without invented values.", url: "/progression" },
 };
 
 export default function ProgressionPage() {

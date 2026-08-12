@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Unbox Squishies FAQ | Codes, Odds, Currency and Creator",
   description: "Fact-checked answers about Unbox Squishies: first actions, creator, codes, odds, currency, upgrades, and offline earnings.",
   alternates: { canonical: "/faq" },
+  openGraph: { title: "Unbox Squishies FAQ", description: "Evidence-labeled answers about codes, odds, currency, creator, and more.", url: "/faq" },
 };
 
 export default function FAQPage() {

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Unbox Squishies Core Gameplay Loop",
   description: "Learn the verified Unbox Squishies loop: get a box, unbox a Squishy, squish to earn, and collect rare finds.",
   alternates: { canonical: "/core-loop" },
+  openGraph: { title: "Unbox Squishies Core Gameplay Loop", description: "Get, unbox, squish, collect—the verified four-action loop.", url: "/core-loop" },
 };
 
 export default function CoreLoopPage() {

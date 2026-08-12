@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Unbox Squishies Beginner Guide | First Session Route",
   description: "Follow three fact-checked steps for your first Unbox Squishies session: get a box, unbox it, and squish to earn.",
   alternates: { canonical: "/beginner-guide" },
+  openGraph: { title: "Unbox Squishies Beginner Guide", description: "Three fact-checked actions for your first session.", url: "/beginner-guide" },
 };
 
 export default function BeginnerGuidePage() {

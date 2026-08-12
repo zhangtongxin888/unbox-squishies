@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Unbox Squishies Common Mistakes | Wrong-Game Check",
   description: "Avoid the most common Unbox Squishies guide mistakes: mixed-up games, unverified odds, invented codes, and borrowed mechanics.",
   alternates: { canonical: "/common-mistakes" },
+  openGraph: { title: "Unbox Squishies Common Mistakes", description: "Catch wrong-game advice, invented odds, and borrowed mechanics.", url: "/common-mistakes" },
 };
 
 export default function CommonMistakesPage() {
