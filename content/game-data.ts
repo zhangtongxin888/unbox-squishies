@@ -67,7 +67,7 @@ export const beginnerSteps = [
     id: "step-1",
     number: "01",
     title: "Get one box",
-    doNow: "Find the way to get a box and take one.",
+    doNow: "Follow the game’s on-screen box action and get one box.",
     why: "A box is the first action named in the official game description.",
     done: "You have a box ready to open.",
     next: "Open it before chasing anything rare.",
@@ -215,10 +215,9 @@ export const routes = [
 ] as const;
 
 export const primaryNav = [
-  ["Beginner guide", "/beginner-guide"],
-  ["Core loop", "/core-loop"],
-  ["Progression", "/progression"],
+  ["Start here", "/beginner-guide"],
+  ["Gameplay loop", "/core-loop"],
+  ["Progress", "/progression"],
   ["Mistakes", "/common-mistakes"],
   ["FAQ", "/faq"],
-  ["Sources", "/sources"],
 ] as const;

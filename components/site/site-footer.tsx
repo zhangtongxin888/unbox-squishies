@@ -9,6 +9,7 @@ export function SiteFooter() {
         <p>Independent player guide. Not affiliated with Roblox Corporation or Squish Squish Squish.</p>
         <nav aria-label="Footer navigation">
           {primaryNav.map(([label, href]) => <a href={href} key={href}>{label}</a>)}
+          <a href="/sources">Sources</a>
         </nav>
       </div>
       <div className="footer-bottom">

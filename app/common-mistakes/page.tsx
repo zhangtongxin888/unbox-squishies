@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function CommonMistakesPage() {
   return (
-    <GuideShell>
-      <PageHero eyebrow="Common mistakes" title="The wrong game can look almost right." description={`Similar experience names make confident but irrelevant advice easy to copy. Use the identity check—Universe ${site.universeId}, Place ${site.rootPlaceId}—before trusting a mechanic.`} />
+    <GuideShell nextHref="/faq" nextLabel="Next: read fact-checked answers">
+      <PageHero current="Common mistakes" eyebrow="Common mistakes" title="The wrong game can look almost right." description={`Similar experience names make confident but irrelevant advice easy to copy. Use the identity check—Universe ${site.universeId}, Place ${site.rootPlaceId}—before trusting a mechanic.`} />
       <section className="section-wrap guide-body">
         <MistakeDoctor />
         <aside className="callout"><strong>The five-second identity check</strong><p>Confirm the title is “[📦] Unbox Squishies,” the creator is “Squish Squish Squish,” and the Place ID is {site.rootPlaceId}. If any one differs, the guide may describe another game.</p></aside>

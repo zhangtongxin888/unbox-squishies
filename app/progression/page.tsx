@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function ProgressionPage() {
   return (
-    <GuideShell>
-      <PageHero eyebrow="Progression guide" title="Use visible milestones, not borrowed numbers." description="Unbox Squishies advertises rare collecting and special events, but does not publicly document an upgrade tree, exact odds, or fixed costs. This route stays useful by focusing on what you can observe." />
+    <GuideShell nextHref="/common-mistakes" nextLabel="Next: avoid common mistakes">
+      <PageHero current="Progression guide" eyebrow="Progression guide" title="Use visible milestones, not borrowed numbers." description="Unbox Squishies advertises rare collecting and special events, but does not publicly document an upgrade tree, exact odds, or fixed costs. This route stays useful by focusing on what you can observe." />
       <section className="section-wrap guide-body" id="observe">
         <ProgressionMatrix />
         <div className="notebook-panel">

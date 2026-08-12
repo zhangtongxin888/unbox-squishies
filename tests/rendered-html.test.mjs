@@ -19,14 +19,14 @@ test("homepage makes the beginner route the primary action", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /Open your first box/);
-  assert.match(html, /href="\/beginner-guide#step-1"[^>]*>Start step 1/);
-  assert.match(html, /Quick start/);
-  assert.match(html, /Core gameplay loop/);
-  assert.match(html, /Progression route/);
-  assert.match(html, /Common mistakes/);
-  assert.match(html, /FAQ/);
-  assert.match(html, /Evidence board/);
+  assert.match(html, /Start with one box/);
+  assert.match(html, /href="\/beginner-guide#step-1"[^>]*>Start the beginner tutorial/);
+  assert.match(html, /Your first session/);
+  assert.match(html, /Squish loop rail/);
+  assert.match(html, /Choose your next move/);
+  assert.match(html, /Wrong-game scanner/);
+  assert.match(html, /Quick answers/);
+  assert.match(html, /Official identity checked/);
   assert.doesNotMatch(html, /Play on Roblox|Squishy CStudios|Unbox a Squishy!|COLLECTS OFFLINE|\$1,000,000\/s/i);
 });
 
@@ -84,7 +84,8 @@ test("SEO metadata, structured data, robots, sitemap and 404 are valid", async (
   assert.match(home, /twitter:card/);
   const jsonLdMatch = home.match(/<script type="application\/ld\+json">([^<]+)<\/script>/);
   assert.ok(jsonLdMatch);
-  assert.equal(JSON.parse(jsonLdMatch[1]).about.name, "[📦] Unbox Squishies");
+  const homeJsonLd = JSON.parse(jsonLdMatch[1]);
+  assert.equal(homeJsonLd["@graph"].find((item) => item["@type"] === "VideoGame").name, "[📦] Unbox Squishies");
 
   const robots = await render("/robots.txt");
   assert.equal(robots.status, 200);
@@ -99,6 +100,23 @@ test("SEO metadata, structured data, robots, sitemap and 404 are valid", async (
   }
 
   assert.equal((await render("/definitely-not-a-page")).status, 404);
+});
+
+test("deep pages provide a contextual mobile next step and breadcrumbs", async () => {
+  const expected = new Map([
+    ["/beginner-guide", ["/core-loop#loop-map", "Next: learn the gameplay loop"]],
+    ["/core-loop", ["/progression#observe", "Next: build your progression plan"]],
+    ["/progression", ["/common-mistakes", "Next: avoid common mistakes"]],
+    ["/common-mistakes", ["/faq", "Next: read fact-checked answers"]],
+    ["/faq", ["/sources#identity", "Next: review the source ledger"]],
+    ["/sources", ["/beginner-guide#step-1", "Restart: beginner tutorial"]],
+  ]);
+
+  for (const [route, [href, label]] of expected) {
+    const html = await (await render(route)).text();
+    assert.match(html, new RegExp(`class="mobile-continue" href="${href.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"[^>]*>${label}`), route);
+    assert.match(html, /"@type":"BreadcrumbList"/, route);
+  }
 });
 
 test("FAQ structured data matches the visible questions", async () => {

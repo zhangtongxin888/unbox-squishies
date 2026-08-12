@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function CoreLoopPage() {
   return (
-    <GuideShell>
-      <PageHero eyebrow="Core gameplay loop" title="Four actions define the route." description="The official description is short, but precise enough to give new players a reliable sequence. Here is what each action proves—and where the public facts stop." />
+    <GuideShell nextHref="/progression#observe" nextLabel="Next: build your progression plan">
+      <PageHero current="Core gameplay loop" eyebrow="Core gameplay loop" title="Four actions define the route." description="The official description is short, but precise enough to give new players a reliable sequence. Here is what each action proves—and where the public facts stop." />
       <section className="section-wrap guide-body">
         <GameplayLoop />
         <div className="reading-grid">

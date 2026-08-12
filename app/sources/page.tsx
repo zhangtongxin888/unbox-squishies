@@ -24,8 +24,8 @@ const sourceRows = [
 
 export default function SourcesPage() {
   return (
-    <GuideShell>
-      <PageHero eyebrow={`Source ledger · Reviewed ${site.reviewedLabel}`} title="Every fact has a boundary." description="This page records which experience we checked, where the facts came from, what the official media shows, and what remains unpublished." />
+    <GuideShell nextHref="/beginner-guide#step-1" nextLabel="Restart: beginner tutorial">
+      <PageHero current="Sources" eyebrow={`Source ledger · Reviewed ${site.reviewedLabel}`} title="Every fact has a boundary." description="This page records which experience we checked, where the facts came from, what the official media shows, and what remains unpublished." />
       <section className="section-wrap guide-body source-ledger">
         <article className="identity-card" id="identity">
           <div><EvidenceBadge kind="official-listing" /><h2>Target identity</h2><p>Use these values to prevent mix-ups with similarly named experiences.</p></div>

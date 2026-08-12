@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function BeginnerGuidePage() {
   return (
-    <GuideShell>
-      <PageHero eyebrow="Beginner guide · 3-step route" title="Your first session, without invented mechanics." description="Complete one box cycle using only actions the official game description confirms. Every step includes a finish line and the next useful move.">
+    <GuideShell nextHref="/core-loop#loop-map" nextLabel="Next: learn the gameplay loop">
+      <PageHero current="Beginner guide" eyebrow="Beginner guide · 3-step route" title="Your first session, without invented mechanics." description="Complete one box cycle using only actions the official game description confirms. Every step includes a finish line and the next useful move.">
         <a className="button button-primary" href="#step-1">Start step 1 <span aria-hidden="true">↓</span></a>
       </PageHero>
       <section className="section-wrap guide-body">

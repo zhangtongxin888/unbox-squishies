@@ -4,14 +4,14 @@ import { primaryNav } from "@/content/game-data";
 export function Brand() {
   return (
     <Link className="brand" href="/" aria-label="Unbox Squishies Guide home">
-      <span className="brand-mark" aria-hidden="true">S</span>
-      <span><b>Unbox</b> Squishies <small>Beginner Guide</small></span>
+      <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
+      <span><b>Unbox</b> Squishies <small>Starter Route</small></span>
     </Link>
   );
 }
 
 function NavLinks() {
-  return primaryNav.map(([label, href]) => <a href={href} key={href}>{label}</a>);
+  return primaryNav.map(([label, href]) => <Link href={href} key={href}>{label}</Link>);
 }
 
 export function SiteHeader() {
@@ -19,7 +19,7 @@ export function SiteHeader() {
     <header className="site-header">
       <Brand />
       <nav className="desktop-nav" aria-label="Main navigation"><NavLinks /></nav>
-      <a className="header-cta" href="/beginner-guide#step-1">Start the guide <span aria-hidden="true">→</span></a>
+      <Link className="header-cta" href="/beginner-guide#step-1">Start the tutorial <span aria-hidden="true">→</span></Link>
       <details className="mobile-nav">
         <summary><span className="menu-open">Open menu</span><span className="menu-close">Close menu</span><b aria-hidden="true">＋</b></summary>
         <nav aria-label="Mobile navigation"><NavLinks /></nav>
