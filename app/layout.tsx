@@ -1,3 +1,4 @@
+import { AdsterraPopunderGate, AdsterraSocialBarGate, AdsterraStickyRail, AdsterraGlobalFallback } from "@/components/ads";
 import type { Metadata, Viewport } from "next";
 import { DM_Sans, Fredoka } from "next/font/google";
 import { site } from "@/content/game-data";
@@ -26,5 +27,9 @@ export const metadata: Metadata = {
 export const viewport: Viewport = { themeColor: "#142542", width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body className={`${display.variable} ${sans.variable}`}>{children}</body></html>;
+  return <html lang="en"><body className={`${display.variable} ${sans.variable}`}>
+        <AdsterraPopunderGate />
+        <AdsterraSocialBarGate />
+        <AdsterraStickyRail />
+        <AdsterraGlobalFallback />{children}</body></html>;
 }
