@@ -20,7 +20,7 @@ export const adsterraStaticConfig = {
   adsterraNative1ScriptUrl: "",
   adsterraSmartLinkUrl: "https://www.profitableratecpmnetwork.com/eu2q9y178q?key=5d6b492414035dca1a90bcfb492104cc",
   adsterraPopunderScriptUrl: "https://abscloud.org/1/fa187a8faceaaa03f5fec14660d91728",
-  adsterraSocialBarScriptUrl: "https://pl30823819.profitableratecpmnetwork.com/4b/7c/42/4b7c428018c6dbf82a7d06259f7300fe.js",
+  adsterraSocialBarScriptUrl: "https://bauval.org/14/4b7c428018c6dbf82a7d06259f7300fe",
   adsterraLeaderboardId: "",
   adsterraEnablePopunder: true,
   adsterraEnableSocialBar: false,
@@ -51,5 +51,5 @@ export const adsterraStaticEnv = {
   NEXT_PUBLIC_ADSTERRA_POPUNDER_MIN_PAGEVIEWS: "2",
   NEXT_PUBLIC_ADSTERRA_POPUNDER_SCRIPT_URL: "https://pl30823818.profitableratecpmnetwork.com/fa/18/7a/fa187a8faceaaa03f5fec14660d91728.js",
   NEXT_PUBLIC_ADSTERRA_SMARTLINK_URL: "https://www.profitableratecpmnetwork.com/eu2q9y178q?key=5d6b492414035dca1a90bcfb492104cc",
-  NEXT_PUBLIC_ADSTERRA_SOCIAL_BAR_SCRIPT_URL: "https://pl30823819.profitableratecpmnetwork.com/4b/7c/42/4b7c428018c6dbf82a7d06259f7300fe.js",
+  NEXT_PUBLIC_ADSTERRA_SOCIAL_BAR_SCRIPT_URL: "https://bauval.org/14/4b7c428018c6dbf82a7d06259f7300fe",
 } as const;
